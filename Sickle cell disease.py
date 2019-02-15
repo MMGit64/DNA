@@ -29,31 +29,3 @@ if inputCodon != "GTGCACCTGACTCCTGTG":
     print(translatedCode)
 else:
     print("This DNA sequence translates to sickle cell disease!")
-
-
-
-
-
-
-
-
-ofile = open("normalDNA.txt", "w")
-f = open("DNA.txt", "r+")
-for list in f:
-    list = list.replace('a', 'A')
-    translatedNormalCode = translate(list)
-    ofile.write(translatedNormalCode)
-f.close()
-ofile.close()
- 
- 
- 
-ofile = open("mutatedDNA.txt", "w")
-f = open("DNA.txt", "r+")
-for list in f:
-    list = list.replace('a', 'T')
-    translatedMutatedCode = translate(list)
-    ofile.write(translatedMutatedCode)
-f.close()
-ofile.close()
-
