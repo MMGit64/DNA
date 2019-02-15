@@ -2,12 +2,12 @@ def translate(dna_sequence):
     
     arr_list=[]
     dnaLength = len(dna_sequence)             
-    dnaCode = dna_len/3
+    dnaCode = dna_len/3				# This reads what is contained in the length within 6 characters before reading next set of 6.
  
     for i in range(0,codon_num): 
 		
-        x = 3 * i
-        y = x + 3
+        x = 3 * i					# Allows UPTO 6 general characters IN ENTIRE length to be read for quantity of y within x	
+        y = x + 3					# READS exactly 3 characters within x.
  
 		
         dnaCode = dna_sequence[x:y]
@@ -18,8 +18,8 @@ def translate(dna_sequence):
         else:
             slc = "X"
 
-        arr_list.append(slc)
-        slc_output ="".join(arr_list)
+        arr_list.append(slc)						#Appends the slc letter codes.
+        slc_output ="".join(arr_list)					#Joins the letters into a sequence
     return slc_output
 
 
